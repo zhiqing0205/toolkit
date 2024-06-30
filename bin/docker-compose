@@ -68,7 +68,10 @@ function set_base_vars() {
   else
     image_name="sharelatex/sharelatex"
   fi
-  export IMAGE="$image_name:$IMAGE_VERSION"
+  # export IMAGE="$image_name:$IMAGE_VERSION"
+  
+  # Use the sharelatex image with texlive-full installed
+  export IMAGE="ziuch/sharelatex:with-texlive-full"
 
   if [[ ${OVERLEAF_LISTEN_IP:-null} == "null" ]];
   then
